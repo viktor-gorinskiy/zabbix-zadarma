@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2018-07-11T08:22:20Z</date>
+    <date>2018-07-11T08:56:34Z</date>
     <groups>
         <group>
             <name>VOIP</name>
@@ -31,7 +31,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.sh -b {$FORCE_API}]</key>
+                    <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.py -b {$FORCE_API}]</key>
                     <delay>60s</delay>
                     <history>10d</history>
                     <trends>30d</trends>
@@ -72,7 +72,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.sh -m {$FORCE_API}]</key>
+                    <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.py -m {$FORCE_API}]</key>
                     <delay>300s</delay>
                     <history>10d</history>
                     <trends>30d</trends>
@@ -115,7 +115,7 @@
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.sh {$FORCE_API}]</key>
+                    <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.py {$FORCE_API}]</key>
                     <delay>600s</delay>
                     <status>0</status>
                     <allowed_hosts/>
@@ -147,7 +147,7 @@
                             <type>0</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.sh -n {#NUMBER} -a {$FORCE_API}]</key>
+                            <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.py -n {#NUMBER} -a {$FORCE_API}]</key>
                             <delay>60s</delay>
                             <history>10d</history>
                             <trends>30d</trends>
@@ -189,7 +189,7 @@
                             <type>0</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.sh -n {#NUMBER} -d {$FORCE_API}]</key>
+                            <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.py -n {#NUMBER} -d {$FORCE_API}]</key>
                             <delay>60s</delay>
                             <history>10d</history>
                             <trends>0</trends>
@@ -231,7 +231,7 @@
                             <type>0</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.sh -n {#NUMBER} -e {$FORCE_API}]</key>
+                            <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.py -n {#NUMBER} -e {$FORCE_API}]</key>
                             <delay>60s</delay>
                             <history>10d</history>
                             <trends>0</trends>
@@ -273,7 +273,7 @@
                             <type>0</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.sh -n {#NUMBER} -g {$FORCE_API}]</key>
+                            <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.py -n {#NUMBER} -g {$FORCE_API}]</key>
                             <delay>60s</delay>
                             <history>10d</history>
                             <trends>0</trends>
@@ -315,7 +315,7 @@
                             <type>0</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.sh -n {#NUMBER} -m {$FORCE_API}]</key>
+                            <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.py -n {#NUMBER} -m {$FORCE_API}]</key>
                             <delay>60s</delay>
                             <history>10d</history>
                             <trends>30d</trends>
@@ -357,7 +357,7 @@
                             <type>0</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.sh -n {#NUMBER} -S {$FORCE_API}]</key>
+                            <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.py -n {#NUMBER} -S {$FORCE_API}]</key>
                             <delay>60s</delay>
                             <history>10d</history>
                             <trends>30d</trends>
@@ -399,7 +399,7 @@
                             <type>0</type>
                             <snmp_community/>
                             <snmp_oid/>
-                            <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.sh -n {#NUMBER} -s {$FORCE_API} {$CUT}]</key>
+                            <key>system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.py -n {#NUMBER} -s {$FORCE_API} {$CUT}]</key>
                             <delay>60s</delay>
                             <history>10d</history>
                             <trends>0</trends>
@@ -439,7 +439,7 @@
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Asterisk_Zadarma:system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.sh -n {#NUMBER} -a {$FORCE_API}].last()}=1</expression>
+                            <expression>{Asterisk_Zadarma:system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.py -n {#NUMBER} -a {$FORCE_API}].last()}=1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>Autorenew off is  {#NUMBER}</name>
@@ -455,7 +455,7 @@
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Asterisk_Zadarma:system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.sh -n {#NUMBER} -S {$FORCE_API}].last()}=1</expression>
+                            <expression>{Asterisk_Zadarma:system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.py -n {#NUMBER} -S {$FORCE_API}].last()}=1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>Status off is  {#NUMBER}</name>
@@ -493,7 +493,7 @@
     </templates>
     <triggers>
         <trigger>
-            <expression>{Asterisk_Zadarma:system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.sh -b {$FORCE_API}].last()}&lt;{Asterisk_Zadarma:system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.sh -m {$FORCE_API}].last()}</expression>
+            <expression>{Asterisk_Zadarma:system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.py -b {$FORCE_API}].last()}&lt;{Asterisk_Zadarma:system.run[/usr/bin/python3 /etc/zabbix/scripts/zadarma_number.py -m {$FORCE_API}].last()}</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>There is not enough money to renew Zadarma</name>
